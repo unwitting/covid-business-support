@@ -6,7 +6,7 @@ import BusinessSocialList from "../components/business_social_list"
 
 export default function Template({ data }) {
   const business = data.business.edges[0].node
-  const { name, location, social } = business
+  const { name, location, website, social } = business
 
   const file = data.file.edges[0].node
   const { relativeDirectory } = file
@@ -27,6 +27,7 @@ export default function Template({ data }) {
       <BusinessSocialList
         twitter={social.twitter}
         instagram={social.instagram}
+        website={website}
       />
     </BaseTemplate>
   )
@@ -39,11 +40,12 @@ export const pageQuery = graphql`
         node {
           name
           location
+          slug
+          website
           social {
             instagram
             twitter
           }
-          slug
         }
       }
     }

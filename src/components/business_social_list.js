@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function BusinessSocialList({ instagram, twitter }) {
+export default function BusinessSocialList({ website, instagram, twitter }) {
   return (
     <>
       <h2>Social links</h2>
@@ -11,6 +11,11 @@ export default function BusinessSocialList({ instagram, twitter }) {
       </p>
       <p>Like, retweet, share and follow them wherever you can:</p>
       <ul>
+        {website && (
+          <li>
+            <a href={website}>Website</a>
+          </li>
+        )}
         {instagram && (
           <li>
             Instagram{" "}
