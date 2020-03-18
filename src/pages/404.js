@@ -1,14 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import BaseTemplate from "../templates/base"
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+  <BaseTemplate meta={{ title: "Page not found" }}>
+    <h1>Page not found</h1>
+    <Link to="/">Home</Link>
+  </BaseTemplate>
 )
 
 export default NotFoundPage
