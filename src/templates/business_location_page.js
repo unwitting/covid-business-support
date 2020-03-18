@@ -17,6 +17,7 @@ export default function Template({ data }) {
       meta={{
         title: `How to support local businesses in ${location} during the Coronavirus pandemic`,
       }}
+      breadcrumbs={[{ text: "Home", path: "/" }]}
     >
       <h1>
         {`Support local businesses in ${location} during the Coronavirus pandemic`}

@@ -1,13 +1,19 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-import classes from "./base.module.scss"
+import "./base.module.scss"
+import Breadcrumbs from "../components/breadcrumbs"
 
-export default function BaseTemplate({ children, meta: { title } }) {
+export default function BaseTemplate({
+  children,
+  meta: { title },
+  breadcrumbs = null,
+}) {
   return (
     <>
       <Helmet title={title} />
-      <main className={classes.main}>{children}</main>
+      {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
+      {children}
     </>
   )
 }
