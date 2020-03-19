@@ -5,10 +5,11 @@ import BaseTemplate from "./base"
 import BusinessSocialList from "../components/business_social_list"
 
 import classes from "./business_location_page.module.scss"
+import BusinessMeasures from "../components/business_measures"
 
 export default function Template({ data }) {
   const business = data.business.edges[0].node
-  const { name, location, website, social } = business
+  const { name, location, website, social, measures } = business
 
   const file = data.file.edges[0].node
   const { relativeDirectory } = file
@@ -27,6 +28,7 @@ export default function Template({ data }) {
         <h1>
           {name}, {location}
         </h1>
+        <BusinessMeasures measures={measures} />
         <BusinessSocialList
           twitter={social.twitter}
           instagram={social.instagram}
@@ -46,6 +48,7 @@ export const pageQuery = graphql`
           location
           slug
           website
+          measures
           social {
             instagram
             twitter
