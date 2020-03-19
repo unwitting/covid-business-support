@@ -4,7 +4,7 @@ date: "2020-03-18"
 title: "Coronavirus Business Support"
 ---
 
-# Coronavirus Business Support
+# Support your local businesses during the pandemic
 
 The global Coronavirus / COVID-19 pandemic is hitting local business incredibly hard: in the UK, the population has been advised to steer clear of any unnecessary contact or gatherings, yet businesses have not been forced to close by government.
 
@@ -12,7 +12,7 @@ This leaves them without the majority of their income, but unable to claim insur
 
 Many businesses are coming up with novel and creative ways to keep themselves afloat during the pandemic: restaurants are offering takeaway or delivery where they didn't before, services are opening up for paid-up-front bookings to maintain some cashflow.
 
-This site exists to list those businesses, location-by-location, with information on the special measures they're taking. Use it to support them if you're unable to give them your usual business: for many of them this is an existential threat.
+This site lists those businesses with information on the special measures they're taking. Use it to support them if you're unable to give them your usual business: for many of them this is an existential threat.
 
 ## Contributing
 
@@ -21,3 +21,7 @@ Watch this space: we'll need to crowdsource this. For now, get in touch with Jac
 ## Locations
 
 - [Edinburgh](/businesses/locations/edinburgh)
+
+### Other locations
+
+Other locations may be available soon: I've started this to support my local businesses as quickly as possible, so my focus has been on [Edinburgh](/businesses/locations/edinburgh). If you're a developer in the UK, get in touch with me on [Twitter](https://twitter.com/unwttng) and we can talk about setting you up as a local contributor for a new area.

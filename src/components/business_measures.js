@@ -3,7 +3,7 @@ import remark from "remark"
 import recommendedRemark from "remark-preset-lint-recommended"
 import htmlRemark from "remark-html"
 
-export default function BusinessMeasures({ measures }) {
+export default function BusinessMeasures({ businessName, measures }) {
   const htmlMeasures = measures.map(measureMarkdown =>
     remark()
       .use(recommendedRemark)
@@ -13,7 +13,12 @@ export default function BusinessMeasures({ measures }) {
   )
   return (
     <>
-      <h2>Special measures you can take</h2>
+      <h2>How you can help</h2>
+      <p>
+        Alongside your usual business as far as it's possible and safe to do so,{" "}
+        {businessName} have taken the following special measures to allow you to
+        support them:
+      </p>
       <ul>
         {htmlMeasures.map((html, i) => (
           <li

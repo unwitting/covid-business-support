@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 
-import classes from "./business_location_page.module.scss"
+import classes from "./markdown_page.module.scss"
 
 export default function Template({
   data: {

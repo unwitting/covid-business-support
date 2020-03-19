@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 import BusinessSocialList from "../components/business_social_list"
 
-import classes from "./business_location_page.module.scss"
+import classes from "./business_page.module.scss"
 import BusinessMeasures from "../components/business_measures"
 
 export default function Template({ data }) {
@@ -28,7 +28,7 @@ export default function Template({ data }) {
         <h1>
           {name}, {location}
         </h1>
-        <BusinessMeasures measures={measures} />
+        <BusinessMeasures businessName={name} measures={measures} />
         <BusinessSocialList
           twitter={social.twitter}
           instagram={social.instagram}
