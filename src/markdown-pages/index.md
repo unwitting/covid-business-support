@@ -16,7 +16,9 @@ This site lists those businesses with information on the special measures they'r
 
 ## Contributing
 
-Watch this space: we'll need to crowdsource this. For now, get in touch with Jack [@unwttng](https://twitter.com/unwttng) to express your interest in helping out.
+Watch this space: we'll need to crowdsource this information. For now, get in touch with Jack [@unwttng](https://twitter.com/unwttng) to express your interest in helping out.
+
+If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
 ## Locations
 
