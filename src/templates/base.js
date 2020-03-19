@@ -9,11 +9,20 @@ export default function BaseTemplate({
   meta: { title, description },
   breadcrumbs = null,
 }) {
+  const fullTitle = `${title ? `${title} | ` : ""}COVID Business Support`
   return (
     <>
       <Helmet>
-        <title>{`${title ? `${title} | ` : ""}COVID Business Support`}</title>
-        <meta name="description" content={description} />
+        <title>{fullTitle}</title>
+        {description && <meta name="description" content={description} />}
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@unwttng" />
+
+        <meta property="og:title" content={fullTitle} />
+        {description && (
+          <meta property="og:description" content={description} />
+        )}
       </Helmet>
       {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
       {children}
