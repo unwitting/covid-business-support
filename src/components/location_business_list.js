@@ -8,8 +8,9 @@ export default function LocationBusinessList({ businesses }) {
       <h2>Not on this list?</h2>
       <p>
         For now, get in touch with Jack{" "}
-        <a href="https://twitter.com/unwttng">via Twitter</a>. We'll have a more
-        robust contribution mechanism soon, hold tight.
+        <a href="https://twitter.com/unwttng">via Twitter</a>. If you're a
+        developer or are a bit handy with Github, check out the "Contributing"
+        header on the <Link to="/">home page</Link>.
       </p>
       <h2>Business list</h2>
       <p>

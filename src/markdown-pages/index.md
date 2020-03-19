@@ -18,7 +18,7 @@ This website is minimal, I get it. I'm making it fast, since this is an urgent s
 
 ## Contributing
 
-Watch this space: we'll need to crowdsource this information. For now, get in touch with Jack [@unwttng](https://twitter.com/unwttng) to express your interest in helping out.
+We need to crowdsource this information. If you're handy with Github-based projects, can write a simple JSON file and are in the UK, I need you. Head to the [Github repo](https://github.com/unwitting/covid-business-support) and look at the README to get started. In most cases, adding a business is as easy as creating a small new JSON file from a template.
 
 If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
