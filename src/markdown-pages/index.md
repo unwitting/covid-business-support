@@ -27,6 +27,7 @@ If neither of those are you, then please just **share** and put out the call for
 ## Locations
 
 - [Edinburgh](/businesses/locations/edinburgh)
+- [Glasgow [COMING SOON]](/businesses/locations/glasgow)
 
 ### Other locations
 
