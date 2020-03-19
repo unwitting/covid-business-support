@@ -19,7 +19,7 @@ If you want to add a business to an existing location, these are the steps:
    - The link is a little hard to find: you'll see a line with a green tick and the text `netlify/covid-business-support/deploy-preview — Deploy preview ready!`, next to which is a **Details** link. Click that.
    - If there's a problem building the preview, you'll likely need to check the validity of your JSON and failing that run the build locally yourself
    - That's a bit to cover in itself, but if you're familiar with Gatsby, you need `node v10.19`, and to run `npm run build` after an `npm install`
-5. Once everything passes, ping @unwttng and they'll help get it merged
+5. Once everything passes, ping [unwitting](https://github.com/unwitting) and they'll help get it merged
 
 ### Template JSON
 

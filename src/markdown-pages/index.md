@@ -22,6 +22,8 @@ We need to crowdsource this information. If you're handy with Github-based proje
 
 If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
+If neither of those are you, then please just **share** and put out the call for both contributors and customers for these businesses.
+
 ## Locations
 
 - [Edinburgh](/businesses/locations/edinburgh)
@@ -29,3 +31,9 @@ If you have skills in React/Gatsby-based projects and want to contribute design 
 ### Other locations
 
 Other locations may be available soon: I've started this to support my local businesses as quickly as possible, so my focus has been on [Edinburgh](/businesses/locations/edinburgh). If you're a developer in the UK, get in touch with me on [Twitter](https://twitter.com/unwttng) and we can talk about setting you up as a local contributor for a new area.
+
+## Finally
+
+This site is **totally unofficial** and **unaffiliated** with any government or health bodies. It's literally just a hand of support being put out by somebody who's main skills lie in making a quick website. The project was kicked off by [Jack Preston](https://twitter.com/unwttng) and they reached out for local contributors from there.
+
+**All advice or information on this site should take a second place to current official recommendations on how to stay safe**.
