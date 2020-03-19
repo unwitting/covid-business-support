@@ -15,9 +15,10 @@ export default function BusinessMeasures({ businessName, measures }) {
     <>
       <h2>How you can help</h2>
       <p>
-        Alongside your usual business as far as it's possible and safe to do so,{" "}
-        {businessName} have taken the following special measures to allow you to
-        support them:
+        Stay safe and don't go to a business in person if you are ill or should
+        be self-isolating under current official advice, but your support is
+        vital during this period. {businessName} have taken the following
+        measures to make it possible:
       </p>
       <ul>
         {htmlMeasures.map((html, i) => (
