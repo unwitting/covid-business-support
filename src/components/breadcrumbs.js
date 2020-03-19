@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import classes from "./breadcrumbs.module.scss"
+
 export default function Breadcrumbs({ breadcrumbs }) {
   return (
-    <header>
+    <header className={classes.breadcrumbs}>
       <ul>
         {breadcrumbs.map(({ text, path }) => (
           <li>
