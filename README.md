@@ -7,7 +7,7 @@ This is a (very) brief guide to the project and how to contribute new data. I'll
 If you want to add a business to an existing location, these are the steps:
 
 1. Fork the project
-2. Add a new JSON file to `src/json-data/businesses/the-location/
+2. Add a new JSON file to `src/json-data/businesses/the-location/`
    - Choose a URL slug (eg `stag-barber`: lower case and numbers, with hyphens) and use it for the `<filename>.json`
    - Copy a nearby file or check out the template below for the actual content
    - **The `slug` field must match the filename**
