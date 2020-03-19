@@ -7,13 +7,13 @@ import classes from "./markdown_page.module.scss"
 export default function Template({
   data: {
     markdownRemark: {
-      frontmatter: { title, date, description },
+      frontmatter: { title, date, path, description },
       html,
     },
   },
 }) {
   return (
-    <BaseTemplate meta={{ title, description }}>
+    <BaseTemplate meta={{ title, description }} path={path}>
       <main
         className={classes.main}
         dangerouslySetInnerHTML={{ __html: html }}

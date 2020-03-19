@@ -9,10 +9,11 @@ import BusinessMeasures from "../components/business_measures"
 
 export default function Template({ data }) {
   const business = data.business.edges[0].node
-  const { name, location, website, social, measures } = business
+  const { name, location, website, social, slug, measures } = business
 
   const file = data.file.edges[0].node
   const { relativeDirectory } = file
+  const pathToHere = `/${relativeDirectory}/${slug}/`
 
   return (
     <BaseTemplate
@@ -20,6 +21,7 @@ export default function Template({ data }) {
         title: `Support ${name}, ${location} during the Coronavirus pandemic`,
         description: `Find out how to support ${name} in ${location} during the Coronavirus pandemic. For many independents in the UK this is an existential threat, and you can help.`,
       }}
+      path={pathToHere}
       breadcrumbs={[
         { text: "Home", path: "/" },
         { text: location, path: `/${relativeDirectory}/` },
