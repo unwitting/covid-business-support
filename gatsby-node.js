@@ -122,7 +122,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   businessLocationSlugs.forEach(locationSlug => {
     const pathBase = `businesses/locations/${locationSlug}`
-    console.log(`${pathBase}/*`)
     createPage({
       path: `/${pathBase}/`,
       component: businessLocationTemplate,
