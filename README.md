@@ -16,7 +16,7 @@ If you want to add a business to an existing location, these are the steps:
    - Website and social fields can individually be `null`
 3. Raise a PR to this project (if you want a light demo, there's a pretend PR [here](https://github.com/unwitting/covid-business-support/pull/1))
 4. Netlify will deploy a preview build for you: watch the PR updates for a link when it's ready
-   - The link is a little hard to find: you'll see a line with a green tick and the text `netlify/covid-business-support/deploy-preview — Deploy preview ready!`, next to which is a **Details** link. Click that.
+   - The link is a little hard to find: expand **Show all checks** next to **All checks have passed** and you'll see a line with a green tick and the text `netlify/covid-business-support/deploy-preview — Deploy preview ready!`, next to which is a **Details** link. Click that.
    - If there's a problem building the preview, you'll likely need to check the validity of your JSON and failing that run the build locally yourself
    - That's a bit to cover in itself, but if you're familiar with Gatsby, you need `node v10.19`, and to run `npm run build` after an `npm install`
 5. Once everything passes, ping [unwitting](https://github.com/unwitting) and they'll help get it merged
