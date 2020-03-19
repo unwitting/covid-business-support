@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 
+import classes from "./business_location_page.module.scss"
+
 export default function Template({
   data: {
     markdownRemark: {
@@ -12,7 +14,10 @@ export default function Template({
 }) {
   return (
     <BaseTemplate meta={{ title }}>
-      <main dangerouslySetInnerHTML={{ __html: html }} />
+      <main
+        className={classes.main}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </BaseTemplate>
   )
 }

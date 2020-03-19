@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 import LocationBusinessList from "../components/location_business_list"
 
+import classes from "./business_location_page.module.scss"
+
 export default function Template({ data }) {
   const files = data.files.edges.map(({ node }) => node)
   const businesses = files.map(file => ({
@@ -19,10 +21,12 @@ export default function Template({ data }) {
       }}
       breadcrumbs={[{ text: "Home", path: "/" }]}
     >
-      <h1>
-        {`Support local businesses in ${location} during the Coronavirus pandemic`}
-      </h1>
-      <LocationBusinessList businesses={businesses} />
+      <main className={classes.main}>
+        <h1>
+          {`Support local businesses in ${location} during the Coronavirus pandemic`}
+        </h1>
+        <LocationBusinessList businesses={businesses} />
+      </main>
     </BaseTemplate>
   )
 }

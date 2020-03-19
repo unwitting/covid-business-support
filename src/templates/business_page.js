@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 import BusinessSocialList from "../components/business_social_list"
 
+import classes from "./business_location_page.module.scss"
+
 export default function Template({ data }) {
   const business = data.business.edges[0].node
   const { name, location, website, social } = business
@@ -21,14 +23,16 @@ export default function Template({ data }) {
         { text: location, path: `/${relativeDirectory}/` },
       ]}
     >
-      <h1>
-        {name}, {location}
-      </h1>
-      <BusinessSocialList
-        twitter={social.twitter}
-        instagram={social.instagram}
-        website={website}
-      />
+      <main className={classes.main}>
+        <h1>
+          {name}, {location}
+        </h1>
+        <BusinessSocialList
+          twitter={social.twitter}
+          instagram={social.instagram}
+          website={website}
+        />
+      </main>
     </BaseTemplate>
   )
 }
