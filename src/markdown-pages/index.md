@@ -14,8 +14,6 @@ Many businesses are coming up with novel and creative ways to keep themselves af
 
 This site lists those businesses with information on the special measures they're taking. Use it to support them if you're unable to give them your usual business: for many of them this is an existential threat.
 
-## Why so basic?
-
 This website is minimal, I get it. I'm making it fast, since this is an urgent situation. It'll improve over time but what's important right now is the information. If you want to help out, see the contributing section below!
 
 ## Contributing
