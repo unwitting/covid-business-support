@@ -1,17 +1,16 @@
 {
-  "name": "Bakery Three.14",
+  "name": "The Business's Name",
   "location": "Edinburgh",
   "slug": "another-business",
-  "lastUpdated": "2020-03-18",
-  "website": "https://www.bakery314.com/",
+  "lastUpdated": "2020-03-19",
+  "website": "https://thewebsiteornull.com",
   "social": {
-    "instagram": "bakerythree.14",
-    "twitter": null
+    "instagram": "IGhandleornull (no @)",
+    "twitter": "Twitterhandleornull (no @)"
   },
   "measures": [
-    "Opening hours are now 10-4 every day",
-    "Food menu is off, but a selection of baked goods are available for you to take away (brownies, cookies, scones, lumberjacks and buns)",
-    "Taking special orders for cakes",
-    "At the end of each day they will do a delivery run of small items on their bike to Newington, Marchmont and Bruntsfield: contact them to order"
+    "What are they doing?",
+    "What's different?",
+    "You can use *markdown*"
   ]
 }
