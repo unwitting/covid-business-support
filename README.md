@@ -19,6 +19,8 @@ If you want to add a business to an existing location, these are the steps:
    - That's a bit to cover in itself, but if you're familiar with Gatsby, you need `node v12.15`, and to run `npm run build` after an `npm install`
 5. Once everything passes, ping @unwttng and they'll help get it merged
 
+### Template JSON
+
 ```json
 {
   "name": "Company Name",
