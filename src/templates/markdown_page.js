@@ -7,13 +7,13 @@ import classes from "./markdown_page.module.scss"
 export default function Template({
   data: {
     markdownRemark: {
-      frontmatter: { title, date },
+      frontmatter: { title, date, description },
       html,
     },
   },
 }) {
   return (
-    <BaseTemplate meta={{ title }}>
+    <BaseTemplate meta={{ title, description }}>
       <main
         className={classes.main}
         dangerouslySetInnerHTML={{ __html: html }}
@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
       }
     }
   }

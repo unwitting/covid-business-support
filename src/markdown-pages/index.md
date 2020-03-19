@@ -1,7 +1,7 @@
 ---
 path: "/"
 date: "2020-03-18"
-title: "Coronavirus Business Support"
+description: "Find out how to support your local businesses during the Coronavirus pandemic. For many independents in the UK this is an existential threat, and you can help."
 ---
 
 # ❤️ Support your local businesses during the pandemic

@@ -17,7 +17,8 @@ export default function Template({ data }) {
   return (
     <BaseTemplate
       meta={{
-        title: `How to support local businesses in ${location} during the Coronavirus pandemic`,
+        title: `Support local businesses in ${location} during the Coronavirus pandemic`,
+        description: `Find out how to support small businesses in ${location} during the Coronavirus / COVID-19 pandemic. For many independents in the UK this is an existential threat, and you can help.`,
       }}
       breadcrumbs={[{ text: "Home", path: "/" }]}
     >

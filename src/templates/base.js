@@ -6,12 +6,15 @@ import Breadcrumbs from "../components/breadcrumbs"
 
 export default function BaseTemplate({
   children,
-  meta: { title },
+  meta: { title, description },
   breadcrumbs = null,
 }) {
   return (
     <>
-      <Helmet title={title} />
+      <Helmet>
+        <title>{`${title ? `${title} | ` : ""}COVID Business Support`}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
       {children}
     </>
