@@ -46,10 +46,7 @@ export default function BaseTemplate({
               <meta property="og:image" content={ogImageUrl} />
               <meta property="og:title" content={fullTitle} />
               {description && (
-                <meta
-                  property="og:description"
-                  content={`${description.split(".")[0]}.`}
-                />
+                <meta property="og:description" content={description} />
               )}
             </Helmet>
             {breadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
