@@ -23,7 +23,7 @@ export default function Template({ data }) {
     >
       <main className={classes.main}>
         <h1>
-          {`Support local businesses in ${location} during the Coronavirus pandemic`}
+          {`How to support local businesses in ${location} during the Coronavirus pandemic`}
         </h1>
         <LocationBusinessList businesses={businesses} />
       </main>

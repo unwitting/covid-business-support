@@ -5,7 +5,13 @@ export default function LocationBusinessList({ businesses }) {
   const { location } = businesses[0]
   return (
     <>
-      <h2>Business directory</h2>
+      <h2>Not on this list?</h2>
+      <p>
+        For now, get in touch with Jack{" "}
+        <a href="https://twitter.com/unwttng">via Twitter</a>. We'll have a more
+        robust contribution mechanism soon, hold tight.
+      </p>
+      <h2>Business list</h2>
       <p>
         Find out how local businesses in {location} are making it possible for
         you to help them during the Coronavirus / COVID-19 pandemic:

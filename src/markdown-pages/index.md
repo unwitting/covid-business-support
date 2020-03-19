@@ -4,7 +4,7 @@ date: "2020-03-18"
 title: "Coronavirus Business Support"
 ---
 
-# Support your local businesses during the pandemic
+# ❤️ Support your local businesses during the pandemic
 
 The global Coronavirus / COVID-19 pandemic is hitting local business incredibly hard: in the UK, the population has been advised to steer clear of any unnecessary contact or gatherings, yet businesses have not been forced to close by government.
 
