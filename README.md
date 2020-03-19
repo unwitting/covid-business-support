@@ -12,7 +12,7 @@ If you want to add a business to an existing location, these are the steps:
    - Copy a nearby file or check out the template below for the actual content
    - **The `slug` field must match the filename**
    - Website and social fields can individually be `null`
-3. Raise a PR to this project
+3. Raise a PR to this project (if you want a light demo, there's a pretend PR [here](https://github.com/unwitting/covid-business-support/pull/1))
 4. Netlify will deploy a preview build for you: watch the PR updates for a link when it's ready
    - The link is a little hard to find: you'll see a line with a green tick and the text `netlify/covid-business-support/deploy-preview — Deploy preview ready!`, next to which is a **Details** link. Click that.
    - If there's a problem building the preview, you'll likely need to check the validity of your JSON and failing that run the build locally yourself
