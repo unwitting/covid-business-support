@@ -2,7 +2,7 @@
 
 [![Netlify status](https://api.netlify.com/api/v1/badges/6bfe4bff-786e-4a25-b19b-05ca0d34aa03/deploy-status)](https://app.netlify.com/sites/covid-business-support/deploys) [![Production link](https://img.shields.io/badge/production-link-informational)](https://covidbusinesssupport.com)
 
-This is a (very) brief guide to the project and how to contribute new data. I'll hopefully flesh this out more but I'm trying to get the site up and running as quickly as possible. If you want to contribute a documentation / README PR, you're more than welcome!
+This is a (very) brief guide to the project and how to contribute new data to [covidbusinesssupport.com](https://covidbusinesssupport.com). I'll hopefully flesh this out more but I'm trying to get the site up and running as quickly as possible. If you want to contribute a documentation / README PR, you're more than welcome!
 
 ## Contributing new businesses
 
