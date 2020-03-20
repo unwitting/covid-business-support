@@ -1,6 +1,4 @@
-const path = require("path")
-
-const googleSheetCredentials = require("./google_sheets_credentials.json")
+const googleSheetCredentials = require("./google_sheets")
 
 module.exports = {
   siteMetadata: {
