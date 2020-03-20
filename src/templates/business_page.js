@@ -35,6 +35,8 @@ export default function Template({ data }) {
         <BusinessSocialList
           twitter={social.twitter}
           instagram={social.instagram}
+          facebook={social.facebook}
+          pinterest={social.pinterest}
           website={website}
         />
       </main>
@@ -55,6 +57,8 @@ export const pageQuery = graphql`
           social {
             instagram
             twitter
+            facebook
+            pinterest
           }
         }
       }
