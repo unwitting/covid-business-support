@@ -1,6 +1,8 @@
 const path = require(`path`)
 const _ = require("lodash")
 
+const slugify = require("./src/utils/slugify")
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
@@ -39,11 +41,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const businessResult = await graphql(`
     {
-      allGoogleSheetDataRow {
+      allGoogleSheetFormResponses1Row {
         nodes {
           id
           location
-          slug
+          name
         }
       }
     }
@@ -54,8 +56,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  businessResult.data.allGoogleSheetDataRow.nodes.forEach(
-    ({ id: businessID, location, slug }) => {
+  businessResult.data.allGoogleSheetFormResponses1Row.nodes.forEach(
+    ({ id: businessID, location, name }) => {
+      const slug = slugify(name)
       if (slug === "demo-business") {
         return
       }
@@ -76,7 +79,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const businessLocationResult = await graphql(`
     {
-      allGoogleSheetDataRow {
+      allGoogleSheetFormResponses1Row {
         nodes {
           location
         }
@@ -90,7 +93,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   const businessLocations = _(
-    businessLocationResult.data.allGoogleSheetDataRow.nodes
+    businessLocationResult.data.allGoogleSheetFormResponses1Row.nodes
   )
     .map(({ location }) => location)
     .uniq()

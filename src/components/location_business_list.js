@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import slugify from "../utils/slugify"
 
 export default function LocationBusinessList({ businesses }) {
   const { location } = businesses[0]
@@ -16,7 +17,8 @@ export default function LocationBusinessList({ businesses }) {
         you to help them during the Coronavirus / COVID-19 pandemic:
       </p>
       <ul>
-        {businesses.map(({ name, location, slug, path }, i) => {
+        {businesses.map(({ name, location, path }, i) => {
+          const slug = slugify(name)
           if (slug === "demo-business") {
             return null
           }

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import slugify from "../utils/slugify"
 import BaseTemplate from "./base"
 import LocationBusinessList from "../components/location_business_list"
 
@@ -10,10 +11,12 @@ export default function Template({ data, pageContext }) {
   const { location } = pageContext
   const locationSlug = location.toLowerCase()
   const pathToHere = `/businesses/locations/${locationSlug}/`
-  const businesses = data.allGoogleSheetDataRow.nodes.map(business => ({
-    ...business,
-    path: `${pathToHere}${business.slug}`,
-  }))
+  const businesses = data.allGoogleSheetFormResponses1Row.nodes.map(
+    business => ({
+      ...business,
+      path: `${pathToHere}${slugify(business.name)}`,
+    })
+  )
 
   return (
     <BaseTemplate
@@ -36,14 +39,13 @@ export default function Template({ data, pageContext }) {
 
 export const pageQuery = graphql`
   query($location: String!) {
-    allGoogleSheetDataRow(
+    allGoogleSheetFormResponses1Row(
       filter: { location: { eq: $location } }
       sort: { fields: name, order: ASC }
     ) {
       nodes {
         name
         location
-        slug
       }
     }
   }

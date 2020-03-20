@@ -20,7 +20,8 @@ module.exports = {
       resolve: `gatsby-source-google-sheets`,
       options: {
         spreadsheetId: googleSheetCredentials.spreadsheetID,
-        worksheetTitle: "Data",
+        // worksheetTitle: "Data",
+        worksheetTitle: "Form Responses 1",
         credentials: googleSheetCredentials,
       },
     },

@@ -4,14 +4,14 @@ import { graphql } from "gatsby"
 import BaseTemplate from "./base"
 import BusinessSocialList from "../components/business_social_list"
 
+import slugify from "../utils/slugify"
 import classes from "./business_page.module.scss"
 import BusinessMeasures from "../components/business_measures"
 
 export default function Template({ data }) {
-  const business = data.allGoogleSheetDataRow.nodes[0]
+  const business = data.allGoogleSheetFormResponses1Row.nodes[0]
   const {
     name,
-    slug,
     location,
     website,
     twitter,
@@ -25,6 +25,7 @@ export default function Template({ data }) {
     measure5,
   } = business
 
+  const slug = slugify(name)
   const locationSlug = location.toLowerCase()
   const pathToHere = `//businesses/locations/${locationSlug}/${slug}/`
   const measures = [measure1, measure2, measure3, measure4, measure5].filter(
@@ -62,10 +63,12 @@ export default function Template({ data }) {
 
 export const pageQuery = graphql`
   query($businessID: String!) {
-    allGoogleSheetDataRow(filter: { id: { eq: $businessID } }, limit: 1) {
+    allGoogleSheetFormResponses1Row(
+      filter: { id: { eq: $businessID } }
+      limit: 1
+    ) {
       nodes {
         name
-        slug
         location
         website
         twitter
