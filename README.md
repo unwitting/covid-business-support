@@ -5,3 +5,5 @@
 ## Contributing new businesses
 
 If you want to add a business, go to the [Google Form](https://forms.gle/BUokFtLLYLvXpz2DA) and follow the instructions. DM Jack on [Twitter](https://twitter.com/unwttng) if you need any help!
+
+If you want to get more involved and help curate and clean the responses, you'll need access to the [Google Sheet](https://docs.google.com/spreadsheets/d/1L4Apq8Yq8SDACJjrAF5s0rCWITTWDbWl2wMLqJPAMXw/edit?usp=sharing): DM Jack on [Twitter](https://twitter.com/unwttng).

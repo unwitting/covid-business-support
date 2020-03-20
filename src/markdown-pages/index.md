@@ -20,6 +20,8 @@ This website is minimal, I get it. I'm making it fast, since this is an urgent s
 
 If you want to add a business, go to the [Google Form](https://forms.gle/BUokFtLLYLvXpz2DA) and follow the instructions. DM Jack on [Twitter](https://twitter.com/unwttng) if you need any help!
 
+If you want to get more involved and help curate and clean the responses, you'll need access to the [Google Sheet](https://docs.google.com/spreadsheets/d/1L4Apq8Yq8SDACJjrAF5s0rCWITTWDbWl2wMLqJPAMXw/edit?usp=sharing): DM Jack on [Twitter](https://twitter.com/unwttng).
+
 If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
 Otherwise please just **share** and put out the call for both contributors and customers for these businesses.
