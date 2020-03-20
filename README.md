@@ -32,7 +32,9 @@ If you want to add a business to an existing location, these are the steps:
   "website": "https://the-website-or-null.com",
   "social": {
     "instagram": "IG handle or null",
-    "twitter": "Twitter handle (no '@') or null"
+    "twitter": "Twitter handle (no '@') or null",
+    "facebook": "Facebook handle or null",
+    "pinterest": "Pinterest username or null"
   },
   "measures": [
     "Information on changes to business",
