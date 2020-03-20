@@ -5,7 +5,7 @@ import "./base.module.scss"
 import Breadcrumbs from "../components/breadcrumbs"
 
 import ogImagePath from "../images/coffee-shop.jpg"
-import { StaticQuery } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 export default function BaseTemplate({
   children,

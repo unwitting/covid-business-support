@@ -6,15 +6,15 @@ import LocationBusinessList from "../components/location_business_list"
 
 import classes from "./business_location_page.module.scss"
 
-export default function Template({ data }) {
-  const files = data.files.edges.map(({ node }) => node)
-  const pathToHere = `/${files[0].relativeDirectory}/`
-  const businesses = files.map(file => ({
-    ...file.childBusiness,
-    path: `${pathToHere}${file.childBusiness.slug}/`,
+export default function Template({ data, pageContext }) {
+  const { location } = pageContext
+  const locationSlug = location.toLowerCase()
+  const pathToHere = `/businesses/locations/${locationSlug}/`
+  const businesses = data.allGoogleSheetDataRow.nodes.map(business => ({
+    ...business,
+    path: `${pathToHere}${business.slug}`,
   }))
 
-  const location = businesses[0].location
   return (
     <BaseTemplate
       meta={{
@@ -35,21 +35,15 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($fileGlob: String!) {
-    files: allFile(
-      filter: { relativePath: { glob: $fileGlob } }
-      sort: { order: ASC, fields: childBusiness___name }
+  query($location: String!) {
+    allGoogleSheetDataRow(
+      filter: { location: { eq: $location } }
+      sort: { fields: name, order: ASC }
     ) {
-      edges {
-        node {
-          id
-          relativeDirectory
-          childBusiness {
-            slug
-            location
-            name
-          }
-        }
+      nodes {
+        name
+        location
+        slug
       }
     }
   }

@@ -39,23 +39,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const businessResult = await graphql(`
     {
-      allFile(
-        filter: {
-          extension: { eq: "json" }
-          relativeDirectory: { glob: "businesses/locations/*" }
-        }
-        sort: { order: ASC, fields: name }
-      ) {
-        edges {
-          node {
-            id
-            relativeDirectory
-            relativePath
-            childBusiness {
-              slug
-              id
-            }
-          }
+      allGoogleSheetDataRow {
+        nodes {
+          id
+          location
+          slug
         }
       }
     }
@@ -66,21 +54,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // TODO check for globally unique slugs
-
-  businessResult.data.allFile.edges.forEach(
-    ({
-      node: {
-        id: fileID,
-        relativeDirectory,
-        childBusiness: { id: businessID, slug },
-      },
-    }) => {
-      const path = `/${relativeDirectory}/${slug}/`
+  businessResult.data.allGoogleSheetDataRow.nodes.forEach(
+    ({ id: businessID, location, slug }) => {
+      if (slug === "demo-business") {
+        return
+      }
+      const locationSlug = location.toLowerCase()
+      const path = `/businesses/locations/${locationSlug}/${slug}/`
       createPage({
         path,
         component: businessTemplate,
-        context: { businessID, fileID },
+        context: { businessID },
       })
     }
   )
@@ -92,14 +76,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const businessLocationResult = await graphql(`
     {
-      allDirectory(
-        filter: { relativeDirectory: { eq: "businesses/locations" } }
-        sort: { order: ASC, fields: relativePath }
-      ) {
-        edges {
-          node {
-            relativePath
-          }
+      allGoogleSheetDataRow {
+        nodes {
+          location
         }
       }
     }
@@ -110,22 +89,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const businessLocationSlugs = _(
-    businessLocationResult.data.allDirectory.edges
+  const businessLocations = _(
+    businessLocationResult.data.allGoogleSheetDataRow.nodes
   )
-    .map(({ node: { relativePath } }) => {
-      const [_businesses, _locations, location] = relativePath.split("/")
-      return location
-    })
+    .map(({ location }) => location)
     .uniq()
     .value()
 
-  businessLocationSlugs.forEach(locationSlug => {
+  businessLocations.forEach(location => {
+    const locationSlug = location.toLowerCase()
     const pathBase = `businesses/locations/${locationSlug}`
     createPage({
       path: `/${pathBase}/`,
       component: businessLocationTemplate,
-      context: { fileGlob: `${pathBase}/*` },
+      context: { location },
     })
   })
 }

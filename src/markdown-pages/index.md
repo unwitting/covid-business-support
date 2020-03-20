@@ -18,11 +18,17 @@ This website is minimal, I get it. I'm making it fast, since this is an urgent s
 
 ## Contributing
 
-We need to crowdsource this information. If you're handy with Github-based projects, can write a simple JSON file and are in the UK, I need you. Head to the [Github repo](https://github.com/unwitting/covid-business-support) and look at the README to get started. In most cases, adding a business is as easy as creating a small new JSON file from a template.
+If you want to add a business:
+
+1. Get access to edit the Google Sheet: DM Jack on [Twitter](https://twitter.com/unwttng)
+2. Go to the [Google Sheet](https://docs.google.com/spreadsheets/d/1L4Apq8Yq8SDACJjrAF5s0rCWITTWDbWl2wMLqJPAMXw/edit?usp=sharing)
+3. Add a new entry, following the other examples
+4. Wait a little while: the site updates from the data every so often
+5. If you have any trouble, contact [Jack](https://twitter.com/unwttng)
 
 If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
-If neither of those are you, then please just **share** and put out the call for both contributors and customers for these businesses.
+Otherwise please just **share** and put out the call for both contributors and customers for these businesses.
 
 ## Locations
 

@@ -8,12 +8,28 @@ import classes from "./business_page.module.scss"
 import BusinessMeasures from "../components/business_measures"
 
 export default function Template({ data }) {
-  const business = data.business.edges[0].node
-  const { name, location, website, social, slug, measures } = business
+  const business = data.allGoogleSheetDataRow.nodes[0]
+  const {
+    name,
+    slug,
+    location,
+    website,
+    twitter,
+    instagram,
+    facebook,
+    pinterest,
+    measure1,
+    measure2,
+    measure3,
+    measure4,
+    measure5,
+  } = business
 
-  const file = data.file.edges[0].node
-  const { relativeDirectory } = file
-  const pathToHere = `/${relativeDirectory}/${slug}/`
+  const locationSlug = location.toLowerCase()
+  const pathToHere = `//businesses/locations/${locationSlug}/${slug}/`
+  const measures = [measure1, measure2, measure3, measure4, measure5].filter(
+    x => !!x
+  )
 
   return (
     <BaseTemplate
@@ -24,7 +40,7 @@ export default function Template({ data }) {
       path={pathToHere}
       breadcrumbs={[
         { text: "Home", path: "/" },
-        { text: location, path: `/${relativeDirectory}/` },
+        { text: location, path: `/${locationSlug}/` },
       ]}
     >
       <main className={classes.main}>
@@ -33,10 +49,10 @@ export default function Template({ data }) {
         </h1>
         <BusinessMeasures businessName={name} measures={measures} />
         <BusinessSocialList
-          twitter={social.twitter}
-          instagram={social.instagram}
-          facebook={social.facebook}
-          pinterest={social.pinterest}
+          twitter={twitter}
+          instagram={instagram}
+          facebook={facebook}
+          pinterest={pinterest}
           website={website}
         />
       </main>
@@ -45,29 +61,22 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-  query($businessID: String!, $fileID: String!) {
-    business: allBusiness(filter: { id: { eq: $businessID } }, limit: 1) {
-      edges {
-        node {
-          name
-          location
-          slug
-          website
-          measures
-          social {
-            instagram
-            twitter
-            facebook
-            pinterest
-          }
-        }
-      }
-    }
-    file: allFile(filter: { id: { eq: $fileID } }, limit: 1) {
-      edges {
-        node {
-          relativeDirectory
-        }
+  query($businessID: String!) {
+    allGoogleSheetDataRow(filter: { id: { eq: $businessID } }, limit: 1) {
+      nodes {
+        name
+        slug
+        location
+        website
+        twitter
+        instagram
+        facebook
+        pinterest
+        measure1
+        measure2
+        measure3
+        measure4
+        measure5
       }
     }
   }

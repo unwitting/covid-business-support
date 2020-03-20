@@ -1,5 +1,7 @@
 const path = require("path")
 
+const googleSheetCredentials = require("./google_sheets_credentials.json")
+
 module.exports = {
   siteMetadata: {
     title: `COVID Business Support`,
@@ -17,29 +19,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-google-sheets`,
       options: {
-        name: `json-data`,
-        path: `${__dirname}/src/json-data`,
+        spreadsheetId: googleSheetCredentials.spreadsheetID,
+        worksheetTitle: "Data",
+        credentials: googleSheetCredentials,
       },
     },
     `gatsby-transformer-remark`,
-    {
-      resolve: "gatsby-transformer-json",
-      options: {
-        typeName: ({ node: { relativeDirectory }, object }) => {
-          const dirSplit = relativeDirectory.split("/")
-          if (
-            dirSplit[0] === "businesses" &&
-            dirSplit[1] === "locations" &&
-            dirSplit.length === 3
-          ) {
-            return "business"
-          }
-          return "otherJson"
-        },
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
