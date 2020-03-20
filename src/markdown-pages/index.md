@@ -16,6 +16,16 @@ This site lists those businesses with information on the special measures they'r
 
 This website is minimal, I get it. I'm making it fast, since this is an urgent situation. It'll improve over time but what's important right now is the information. If you want to help out, see the contributing section below!
 
+## Locations
+
+- [Edinburgh](/businesses/locations/edinburgh/)
+- [Glasgow [COMING SOON]](/businesses/locations/glasgow/)
+- [London [COMING SOON]](/businesses/locations/london/)
+
+### Other locations
+
+Other locations will appear here as they get businesses added: see the **Contributing** section below to find out how to submit information and add one in your area!
+
 ## Contributing
 
 If you want to add a business, go to the [Google Form](https://forms.gle/BUokFtLLYLvXpz2DA) and follow the instructions. DM Jack on [Twitter](https://twitter.com/unwttng) if you need any help!
@@ -25,15 +35,6 @@ If you want to get more involved and help curate and clean the responses, you'll
 If you have skills in React/Gatsby-based projects and want to contribute design or copy talents, you're _more_ than welcome: this site is a public Github project, and pull requests are hugely appreciated. Find it at [unwitting/covid-business-support](https://github.com/unwitting/covid-business-support).
 
 Otherwise please just **share** and put out the call for both contributors and customers for these businesses.
-
-## Locations
-
-- [Edinburgh](/businesses/locations/edinburgh)
-- [Glasgow [COMING SOON]](/businesses/locations/glasgow)
-
-### Other locations
-
-Other locations may be available soon: I've started this to support my local businesses as quickly as possible, so my focus has been on [Edinburgh](/businesses/locations/edinburgh). If you're a developer in the UK, get in touch with me on [Twitter](https://twitter.com/unwttng) and we can talk about setting you up as a local contributor for a new area.
 
 ## Finally
 
